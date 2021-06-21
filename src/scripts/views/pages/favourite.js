@@ -1,4 +1,4 @@
-import RestoDbSource from '../../data/restodb-source';
+import FavRestaurantIdb from '../../data/resto-idb';
 import { createRestoItemTemplate } from '../templates/template-creator';
 
 const Favourite = {
@@ -14,10 +14,10 @@ const Favourite = {
   },
 
   async afterRender() {
-    const restoran = await RestoDbSource.listResto();
-    const restoranContainer = document.querySelector('#resto');
-    restoran.forEach((resto) => {
-      restoranContainer.innerHTML += createRestoItemTemplate(resto);
+    const restaurants = await FavRestaurantIdb.getAllRestaurants();
+    const restaurantContainer = document.querySelector('#resto');
+    restaurants.forEach((restaurant) => {
+      restaurantContainer.innerHTML += createRestoItemTemplate(restaurant);
     });
   },
 };

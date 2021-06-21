@@ -12,16 +12,12 @@ class RestoDbSource {
     return response.json();
   }
 
-  // static async favouriteResto() {
-  //   const response = await fetch(API_ENDPOINT.UPCOMING);
-  //   const responseJson = await response.json();
-  //   return responseJson.results;
-  // }
-
   static async detailResto(id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
-    console.log(response);
-    return response.json();
+    const data = await response.json(); 
+    return data.restaurant; 
+   // console.log(response);
+   // return response.json();
   }
 
   static async searchResto(query) {

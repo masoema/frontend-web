@@ -1,5 +1,4 @@
 import RestoDbSource from '../../data/restodb-source';
-//import { restaurantItemTemplate } from '../templates/template-creator';
 import { createRestoItemTemplate } from '../templates/template-creator';
 import Spinner from '../templates/spinner-creator';
 
@@ -10,7 +9,7 @@ const Home = {
       <div id="loading"></div>
       <div class="main">
         <h2 class="title-container">Daftar Restoran Murah</h2>
-        <section id="daftar-resto"></section>
+        <section id="daftar-resto" class="restos"></section>
       </div>
     </div>
     `;
@@ -26,8 +25,6 @@ const Home = {
     try {
       const data = await RestoDbSource.listRestaurant();
       const totalRest = data.restaurants.length;
-      //data.restaurants.forEach((restaurant, index) => {
-       // listContainer.innerHTML += restaurantItemTemplate(restaurant, index, totalRest);
       data.restaurants.forEach((restaurant) => {
        listContainer.innerHTML += createRestoItemTemplate(restaurant);
       });
