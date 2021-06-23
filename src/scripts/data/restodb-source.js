@@ -14,10 +14,10 @@ class RestoDbSource {
 
   static async detailResto(id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
-    const data = await response.json(); 
-    return data.restaurant; 
-   // console.log(response);
-   // return response.json();
+    const data = await response.json();
+    return data.restaurant;
+    // console.log(response);
+    // return response.json();
   }
 
   static async searchResto(query) {

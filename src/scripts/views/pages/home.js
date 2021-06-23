@@ -26,7 +26,7 @@ const Home = {
       const data = await RestoDbSource.listRestaurant();
       const totalRest = data.restaurants.length;
       data.restaurants.forEach((restaurant) => {
-       listContainer.innerHTML += createRestoItemTemplate(restaurant);
+        listContainer.innerHTML += createRestoItemTemplate(restaurant);
       });
       main.style.display = 'block';
       loading.style.display = 'none';
