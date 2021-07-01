@@ -10,9 +10,10 @@ const createRestoDetailTemplate = (restaurant) => `
       <h4>Rating</h4>
       <p>${restaurant.rating}</p>
       <h4>Categories</h4>
-      <li>${restaurant.categories.map((category) => `
-            <span>${category.name}</span>`).join(',')}
-      </li>
+      <ul>
+        <li>${restaurant.categories.map((category) => `
+              <span>${category.name}</span>`).join(',')}
+        </li>
     </ul>
     <h3>Menu</h3>
         <h4>Food</h4>

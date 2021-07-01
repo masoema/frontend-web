@@ -11,6 +11,17 @@ body {
     flex-direction: column;
 }
 
+button {
+  box-sizing: border-box;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+a {
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+}
 
 /*
   AppBar
@@ -350,6 +361,12 @@ main {
     background-color: var(--primary-color);
   }
 
+  #hamburgerButton{
+    box-sizing: border-box;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
 /*
   Footer
 */
@@ -434,3 +451,16 @@ footer p a {
     background-color: var(--secondary-color);
   }
   
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #ca4646;
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
